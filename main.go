@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	initDB.Db = initDB.InitDB()
+	initDB.InitDB()
 	err := initDB.Db.AutoMigrate(&models.Todo{})
 	if err != nil {
 		log.Fatal(err)
